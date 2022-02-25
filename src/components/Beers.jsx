@@ -16,12 +16,12 @@ export default function Beers() {
     <div className="beers">
       <Header />
       {dataFromApi.map(beer => (
-        <Link to={`/beers/${beer.id}`}>
-          <div className="beer-card" key={beer._id}>
+        <Link to={`/beers/${beer._id}`} key={beer._id}>
+          <div className="beer-card">
             <img src={beer.image_url} alt="current beer" />
             <div>
               <h2>{beer.name}</h2>
-              <span>{beer.tagline}</span>
+              <span className="tagline">{beer.tagline}</span>
               <span>
                 <strong>Created by: </strong>
                 {beer.contributed_by}
