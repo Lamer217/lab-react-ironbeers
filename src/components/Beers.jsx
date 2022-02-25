@@ -1,6 +1,7 @@
 import React from 'react';
 import { useEffect, useState } from 'react';
 import Header from '../components/Header';
+import { Link } from 'react-router-dom';
 
 export default function Beers() {
   const [dataFromApi, setDataFromApi] = useState([]);
@@ -12,12 +13,22 @@ export default function Beers() {
   }, []);
   console.log(dataFromApi);
   return (
-    <div>
+    <div className="beers">
       <Header />
       {dataFromApi.map(beer => (
-        <div className="beer-card" key={beer._id}>
-          <h2>{beer.name}</h2>
-        </div>
+        <Link to={`/beers/${beer.id}`}>
+          <div className="beer-card" key={beer._id}>
+            <img src={beer.image_url} alt="current beer" />
+            <div>
+              <h2>{beer.name}</h2>
+              <span>{beer.tagline}</span>
+              <span>
+                <strong>Created by: </strong>
+                {beer.contributed_by}
+              </span>
+            </div>
+          </div>
+        </Link>
       ))}
     </div>
   );
