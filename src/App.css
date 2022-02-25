@@ -15,3 +15,12 @@
 .home-page h2 {
   padding-left: 1rem;
 }
+
+.header {
+  background-color: #3dc4fc;
+  padding: 1rem;
+}
+
+.header a {
+  display: block;
+}
