@@ -7,6 +7,11 @@
   color: black;
 }
 
+.home-page img {
+  max-width: 100%;
+  height: auto;
+}
+
 .home-page h2,
 .home-page p {
   float: left;
@@ -122,4 +127,59 @@
 
 .beer-detail-card p {
   font-size: 1.3rem;
+}
+
+form {
+  display: flex;
+  flex-direction: column;
+  padding: 0 1.5rem;
+}
+
+form > input,
+form > textarea {
+  border-radius: 15px;
+  border: 1px solid rgb(141, 141, 141);
+  padding: 0.4rem 0 0.4rem 0.4rem;
+  font-size: 1.2rem;
+}
+
+textarea {
+  resize: none;
+}
+
+form > label {
+  align-self: flex-start;
+  margin: 0.3rem 0 0.4rem 0.2rem;
+  font-size: 1.2rem;
+  font-weight: 500;
+}
+
+form > button {
+  margin-top: 1.8rem;
+  background-color: #3dc4fc;
+  font-size: 1.3rem;
+  border-radius: 22px;
+  border: none;
+  padding: 0.5rem 0;
+  color: #fff;
+}
+
+form > button:hover {
+  background-color: #36b0e2;
+}
+
+.response-message {
+  display: block;
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  margin: 0 auto;
+  color: #fff;
+  background-color: #3dc4fc;
+  opacity: 0.9;
+  width: fit-content;
+  padding: 1rem;
+  border-radius: 22px;
+  font-size: 1.5rem;
 }
